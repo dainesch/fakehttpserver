@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="5.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lu.dainesch.fakehttp.view.request.RequestCellPresenter">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="10.0" />
+      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+      <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Label fx:id="pathLabel" mouseTransparent="true" text="Label" GridPane.columnIndex="2" />
+      <Label fx:id="statusLabel" mouseTransparent="true" text="Status" textFill="WHITE" GridPane.columnIndex="1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="typeLabel" styleClass="typeLabel" text="Type" GridPane.columnIndex="3" />
+   </children>
+</GridPane>

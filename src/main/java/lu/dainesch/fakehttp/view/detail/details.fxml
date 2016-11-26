@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="673.0" prefWidth="897.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lu.dainesch.fakehttp.view.detail.DetailsPresenter">
+   <children>
+      <HBox spacing="10.0">
+         <children>
+            <BorderPane prefHeight="200.0" HBox.hgrow="ALWAYS">
+               <top>
+                  <Label styleClass="title" text="Request" BorderPane.alignment="CENTER" />
+               </top>
+               <center>
+                  <TableView fx:id="requestHeaders" editable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="300.0" HBox.hgrow="ALWAYS">
+               <top>
+                  <Label styleClass="title" text="Response" BorderPane.alignment="CENTER" />
+               </top>
+               <center>
+                  <TableView fx:id="responseHeaders" editable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TabPane HBox.hgrow="ALWAYS">
+               <tabs>
+                  <Tab closable="false" text="Parameters">
+                     <content>
+                        <TableView fx:id="requestParams" editable="true" prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab closable="false" text="Body">
+                     <content>
+                        <TextArea fx:id="requestView" editable="false" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <TabPane HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <tabs>
+                  <Tab closable="false" text="Body">
+                     <content>
+                        <TextArea fx:id="responseView" editable="false" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

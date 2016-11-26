@@ -1,0 +1,60 @@
+
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Regular.ttf");
+}
+
+.boxSpacing{
+    -fx-padding: 10 10 10 10;
+}
+
+.root {    
+    -fx-font-size: 10pt;
+    -fx-font-family: "Roboto", sans-serif;
+}
+
+.mainBar {
+
+}
+
+.barButton {
+    -fx-min-width: 70px;
+}
+
+.barStart{
+    -fx-graphic: url("/img/icons/plug12.png");
+    -fx-background-color: #99ff99;
+}
+.barStop{
+    -fx-graphic: url("/img/icons/plug42.png");
+    -fx-background-color: #ff9999;
+}
+.barRecord {
+    -fx-graphic: url("/img/icons/record8.png");
+}
+.barClear {
+    -fx-graphic: url("/img/icons/trash30.png");
+}
+.barFilter {
+    -fx-graphic: url("/img/icons/filter16.png");
+}
+
+.title {
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 5px 0;
+}
+
+.aboutTitle {
+    -fx-font-size: 20pt;
+    -fx-font-weight: bold;
+
+}
+
+.typeLabel {
+    -fx-font-size: 8pt;
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-background-color: #e5e5e5;
+    -fx-padding: 0px 5px 0px 5px;
+}
