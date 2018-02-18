@@ -1,6 +1,7 @@
 package lu.dainesch.fakehttp.server;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.logging.Level;
@@ -9,7 +10,6 @@ import org.glassfish.grizzly.CompletionHandler;
 import org.glassfish.grizzly.GrizzlyFuture;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.http.server.NetworkListener;
-import org.glassfish.grizzly.http.server.ServerConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,10 +43,13 @@ public final class FakeHttp {
         }
 
         // Config
-        ServerConfiguration serverConf = server.getServerConfiguration();
+        //ServerConfiguration serverConf = server.getServerConfiguration();
+        
+        // remove all listeners
+        new ArrayList<>(server.getListeners()).stream().forEach(l -> server.removeListener(l.getName()));
 
         // network
-        NetworkListener listener = new NetworkListener("DefaultListener", "localhost", config.getPort().get());
+        NetworkListener listener = new NetworkListener("DefaultListener", "0.0.0.0", config.getPort().get());
         server.addListener(listener);
 
         // register our listener
